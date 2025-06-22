@@ -20,6 +20,7 @@ interface FetchNotesParams {
 export interface CreateNoteParams {
   title: string;
   content: string;
+  tag: string;
 }
 
 export async function fetchNotes({ search, page = 1 }: FetchNotesParams) {
@@ -38,10 +39,15 @@ export async function fetchNoteById(id: string) {
   return res.data;
 }
 
-export async function createNote({ title, content = "" }: CreateNoteParams) {
+export async function createNote({
+  title,
+  content = "",
+  tag,
+}: CreateNoteParams) {
   const response = await axios.post<Note>("", {
     title,
     content,
+    tag,
   });
   return response.data;
 }

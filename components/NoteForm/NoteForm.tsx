@@ -14,9 +14,11 @@ const validationSchema = Yup.object().shape({
     .oneOf(["Todo", "Work", "Personal", "Meeting", "Shopping"], "Invalid tag")
     .required("Tag is required"),
 });
+
 const initialValues: CreateNoteParams = {
   title: "",
   content: "",
+  tag: "Todo",
 };
 
 interface NoteFormProps {
