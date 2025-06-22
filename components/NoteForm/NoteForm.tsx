@@ -17,7 +17,6 @@ const validationSchema = Yup.object().shape({
 const initialValues: CreateNoteParams = {
   title: "",
   content: "",
-  tag: "Todo",
 };
 
 interface NoteFormProps {

@@ -3,5 +3,5 @@ export interface Note {
   title: string;
   content: string;
   tag: string;
+  createdAt: string;
 }
-export type Tag = "Work" | "Todo" | "Personal" | "Meeting" | "Shopping";
